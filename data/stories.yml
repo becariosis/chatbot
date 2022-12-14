@@ -1,0 +1,55 @@
+# CREDITOS: Programado por Jose Pablo Ibarra Medrano el 12/12/2022
+
+version: "3.1"
+
+stories:
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_carousels
+  - intent: ip
+  - action: utter_ip_request1
+  - action: utter_ip_request2
+  - action: utter_ip_request3
+  - action: action_resolve
+  - intent: enojo
+  - action: utter_enojo
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_carousels
+  - intent: ip
+  - action: utter_ip_request1
+  - action: utter_ip_request2
+  - action: utter_ip_request3
+  - action: action_resolve
+  - intent: agradecimiento
+  - action: utter_agradecimiento
+
+
+- story: carousel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_carousels
+
+
+- story: enojo_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_carousels
+  - intent: enojo
+  - action: utter_enojo
+
+- story: agradecimiento_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_carousels
+  - intent: agradecimiento
+  - action: utter_agradecimiento

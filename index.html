@@ -1,0 +1,71 @@
+<!-- CREDITOS: Programado por Jose Pablo Ibarra Medrano el 12/12/2022
+ © 2022 Desarrollo y Mantenimiento por: Jose Pablo Ibarra Medrano -->
+ <html>
+    <title>
+      Chatbot
+      
+    </title>
+    <body>
+      <h1> Chatbot fase de prueba</h1>
+    
+      <!-- Creamos el apartado style para darle mejor aspecto a nuestro bot -->
+      <style>
+        .rw-conversation-container .rw-header {background-color: green}
+        .rw-conversation-container .rw-messages-container .rw-message .rw-response {background-color: #f8f8f8;}
+        .rw-launcher {background-color: green}
+      </style>
+      <script>!(function () {
+          //Inicializamos esta funcion para limpiar el chat cada vez que se refresque la pagina.
+          localStorage.clear()
+          let e = document.createElement("script"),
+            t = document.head || document.getElementsByTagName("head")[0];
+            //Declaramos con que version funcionara nuestro widget
+          (e.src = "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+            // Replace 1.x.x with the version that you want
+            (e.async = !0),
+            (e.onload = () => {
+    
+              //Declaramos las dimensiones de nuestro chatbot tanto el ancho y el largo del mismo.
+              window.WebChat.default({
+                 params: {
+                    images: {
+                      dims: {
+                        width: 600,
+                        height: 300
+                      }
+                    }
+                  },
+    
+                  //Inicializamos el chatbot como si el usuario nos hubiera enviado un mensaje de bienvenida
+                  initPayload: "/greet",
+                  //Escogemos el lenguajes que utilizara nuestro bot
+                  
+                  customData: { language: "es" },
+                  //Especificamos con que url funcionara nuestro bot
+                  socketUrl: "http://localhost:5005", //http://localhost:5005
+                  socketPath: "/socket.io/",
+                  //Titulo de nuestro bot
+                  title: "Soporte Bot",
+                  //Pequeño subtitulo que se mostra en el bot
+                  subtitle: "Resuelve tu problema con un click",
+                  //Imagen que hace referencia a nuestro bot
+                  profileAvatar: "images/bot.png",
+                  //Activamos el modo de pantalla completa
+                  showFullScreenButton: true,
+                  //Mensaje en la barra de enviar mensajes.
+                  inputTextFieldHint: "Escribe un mensaje a Soporte Bot...",
+    
+                  // add other props here
+                },
+                null
+    
+              );
+            }),
+            //Accion necesaria para el correcto funcionamiento del bot
+            t.insertBefore(e, t.firstChild);
+        })();
+    
+      </script>
+    </body>
+    
+    </html>

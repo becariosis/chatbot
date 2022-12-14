@@ -1,0 +1,70 @@
+# CREDITOS: Programado por Jose Pablo Ibarra Medrano el 12/12/2022
+
+#Agregamos los intentos de preguntas o respuestas que nos pueden hacer los usuarios por medio de intents y les colocamos un nombre.
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - Hola
+    - Holaaa
+    - Buenas tardes
+    - Buenas noches
+    - Buenos dias
+    - Que hay
+    - Que onda
+    - Que pd
+- intent: goodbye
+  examples: |
+    - Hasta luego
+    - Adios
+    - Nos vemos
+    - Sale que tengas buena tarde
+    - gracias por la ayuda adios
+    - bye
+    - goodbye
+    - Que tengas buen dia, hasta pronto
+    - bye bye
+- intent: bot_challenge
+  examples: |
+    - Eres un bot?
+    - Eres un humano?
+    - Estoy hablando con un bot?
+    - Estoy hablando con un humano?
+- intent: ip
+  examples: |
+    - ip del equipo
+    - mac del equipo
+    - quiero saber la ip del equipo
+    - quiero saber la Mac del equipo
+    - la ip de mi equipo
+    - la mac de mi equipo
+    - ip
+    - mac
+    - mi ip
+    - mi mac
+    - oye ocupo ayuda para saber cual es la ip de mi equipo
+    - Disculpa ocupo ayuda para saber cual es la mac de mi equipo
+    - Quiero saber mi direccion ip me ayudas?
+- intent: ayuda
+  examples: |
+    - En que me puedes ayudar?
+    - En que me puedes ser util?
+    - Que utilidad haces?
+
+- intent: agradecimiento
+  examples: |
+    - Gracias
+    - Me fue util muchas gracias
+    - Muchas gracias 
+    - Justo lo que necesitaba
+
+- intent: enojo
+  examples: |
+    - No me sirvio
+    - No me ayudo
+    - Esto no me sirve
+    - Quiero hablar con un agente humano
+    - No quiero seguir hablando con el bot
+    - Porque no simplemente hablo con un humano?

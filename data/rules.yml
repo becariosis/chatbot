@@ -1,0 +1,34 @@
+# CREDITOS: Programado por Jose Pablo Ibarra Medrano el 12/12/2022
+
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Di enojo cada vez que el usuario de una respuesta negativa
+  steps:
+  - intent: enojo
+  - action: utter_enojo
+
+- rule: Di gracias cada vez que el usuario de una respuesta positiva
+  steps:
+  - intent: agradecimiento
+  - action: utter_agradecimiento
+
+- rule: ip_request1
+  steps:
+  - intent: ip
+  - action: utter_ip_request1
+  - action: utter_ip_request2
+  - action: utter_ip_request3
+  - action: action_resolve
+

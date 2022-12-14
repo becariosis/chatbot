@@ -1,0 +1,54 @@
+# CREDITOS: Programado por Jose Pablo Ibarra Medrano el 12/12/2022
+#En este archivo se guardan las respuestas que contestara el bot dependiendo al intento que realice el usuario.
+version: "3.1"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- ip
+- goodbye
+- bot_challenge
+- ayuda
+- agradecimiento
+- enojo
+responses:
+  utter_greet:
+  - text: | 
+          Hola soy un bot y estoy para ayudarte. Por favor selecciona algunas de las opciones que tienes abajo para poder ayudarte en lo que pueda.
+          - Consejo: Puedes expandir la ventana del chat a pantalla completa para ver todas nuestras funciones. :)
+  utter_goodbye:
+  - text: Hasta luego, espero haberte sido de utilidad.
+  utter_iamabot:
+  - text: Soy un robot, creado a partir de inteligencia artificial.
+  utter_ip_request1:
+   - text: |
+             Te muestro los siguientes pasos:
+             - 1.- En el buscador de Windows pon “CMD”.
+             - 2.- Entra a la aplicación llamada “símbolo del sistema”.
+     image: "images/ip1.png"
+  utter_ip_request2:
+   - text: |
+             - 3.- Dentro pon el siguiente comando “ipconfig -all”.
+             - 4.- Presiona la tecla “enter”.
+     image: "images/ip2.png"
+  utter_ip_request3:
+   - text: |
+             - 5.- Dentro del apartado adaptador de Ethernet se encuentran ipv4 y dirección física.
+             - 6.- Para la IP y Mac de wifi se dirige al adaptador de wifi.
+     image: "images/ip3.png"
+
+  utter_agradecimiento:
+  - text: Es un placer ayudarle.
+  utter_enojo:
+  - text: |
+          Lamento leer esto, por favor, si su problema no fue resuelto, envie un correo a: "ti_ayuda@tpitic.com.mx" o llame a cualquiera de nuestros agentes a las siguientes extensiones: 
+          - FELIX: 11653.
+          - JUAN: 11622.
+          - ANDRES: 11652.
+          - ALEX: 11615.
+actions:
+- utter_greet
+- utter_ip
+- action_carousels
+- action_resolve
